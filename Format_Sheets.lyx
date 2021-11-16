@@ -1,0 +1,1696 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass memoir
+\use_default_options true
+\begin_modules
+todonotes
+fixltx2e
+enumitem
+InStar
+pdfform
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Format 66
+
+PackageOptions xcolor table
+PackageOptions todonotes colorinlistoftodos
+
+InsetLayout Flex:IgnoreThis
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Do not Render"
+  LatexType             command
+  LatexName             ignorethis
+  ResetsFont            true
+End
+
+InsetLayout Flex:Sidebar
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Sidebar"
+  LatexType             environment
+  LatexName             lumsidebar
+  Argument 1
+    LabelString         "Title"
+    Mandatory	    1
+  EndArgument
+  ResetsFont            true
+End
+
+InsetLayout Flex:Commentary
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Commentary"
+  LatexType             command
+  LatexName             lumcommentary
+  ResetsFont            true
+  BgColor               pink
+End
+
+InsetLayout Flex:ContentWarning
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Content Warning"
+  LatexType             environment
+  LatexName             cw-sidebarenv
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBox
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns"
+  LatexType             environment
+  LatexName             twocolumnbox
+  ResetsFont            true
+End
+
+InsetLayout Flex:NewCommand
+  LyXType               custom
+  Decoration            classic
+  LabelString           "New Command"
+  LatexType             command
+  LatexName             newcommand
+  ResetsFont            true
+  Argument 1
+    LabelString         "Command"
+    Mandatory	    1
+    PassThruChars       "\[]{}_"
+  EndArgument
+  Argument 2
+    LabelString         "Argument Count"
+  EndArgument
+End
+
+InsetLayout Flex:LumForm
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Form"
+  LatexType             command
+  LatexName             lumform
+  ResetsFont            true
+End
+
+InsetLayout Flex:TextBeforeAfter
+  LyXType               custom
+  LatexType             command
+  Decoration            classic
+  LatexName             TextBeforeAfter
+  LabelString           "TextBeforeAfter"
+  Argument 1
+    LabelString         "Before"
+    Mandatory           1
+    AutoInsert          1
+  EndArgument
+  Argument 2
+    LabelString         "After"
+    Mandatory           1
+    AutoInsert          1
+  EndArgument
+  LabelFont
+    Color               magenta
+    Size                Small
+  EndFont
+End
+InsetLayout Flex:TextFieldBeforeAfter
+  LyXType               custom
+  LatexType             command
+  Decoration            classic
+  LatexName             TextFieldBeforeAfter
+  LabelString           "TextFieldBeforeAfter"
+  Argument 1
+    LabelString         "Params"
+    PassThruChars       "\[]{}"
+    Mandatory           1
+  EndArgument
+  Argument 2
+    LabelString         "Before"
+    Mandatory           1
+    AutoInsert          1
+  EndArgument
+  Argument 3
+    LabelString         "After"
+    Mandatory           1
+    AutoInsert          1
+  EndArgument
+  LabelFont
+    Color               magenta
+    Size                Small
+  EndFont
+End
+
+InsetLayout Flex:LumFormBar
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Titled Rule"
+  LatexType             command
+  LatexName             lumformbar
+  ResetsFont            true
+End
+
+InsetLayout Flex:LumFormTitle
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Sheet Title"
+  LatexType             command
+  LatexName             lumformtitle
+  ResetsFont            true
+End
+
+InsetLayout Flex:LumFormDot
+  LyXType               custom
+  Decoration            classic
+  LabelString           "○"
+  LatexType             command
+  LatexName             lumformdot
+  ResetsFont            true
+End
+InsetLayout Flex:LumFormBox
+  LyXType               custom
+  Decoration            classic
+  LabelString           "◻"
+  LatexType             command
+  LatexName             lumformbox
+  ResetsFont            true
+End
+InsetLayout Flex:LumFormTrack
+  LyXType               custom
+  Decoration            classic
+  LabelString           "◻"
+  LatexType             command
+  LatexName             lumformtrack
+  ResetsFont            true
+End
+InsetLayout Flex:LumFormDots
+  LyXType               custom
+  Decoration            classic
+  LabelString           "○○○○○"
+  LatexType             command
+  LatexName             lumformdots
+  ResetsFont            true
+End
+InsetLayout Flex:LumFormFillDots
+  LyXType               custom
+  Decoration            classic
+  LabelString           "●○○○○"
+  LatexType             command
+  LatexName             lumformfilldots
+  ResetsFont            true
+End
+\end_local_layout
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics xetex
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command makeindex
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_title "Luminous: the Dream"
+\pdf_author "AuroraAmissa"
+\pdf_subject "A Storytelling game of Distant Dreams"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 1in
+\rightmargin 0.75in
+\bottommargin 1in
+\footskip 0.5in
+\secnumdepth -2
+\tocdepth 5
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 1
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Length formatting
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+lineskip{4pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+tabcolsep{0pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Misc formatting
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% hyperref engine overrides
+\end_layout
+
+\begin_layout Plain Layout
+
+% Modified from `hyperref/hxetex.def`
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+PDFForm@Check{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /Subtype/Widget%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@annotflags
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@pageobjref
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@annotnames
+\end_layout
+
+\begin_layout Plain Layout
+
+  /FT/Btn%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@flags
+\end_layout
+
+\begin_layout Plain Layout
+
+  /Q 
+\backslash
+Fld@align
+\end_layout
+
+\begin_layout Plain Layout
+
+  /BS<</W 
+\backslash
+Fld@borderwidth /S/
+\backslash
+Fld@borderstyle>>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /AP<< /N <</Yes<<>>>> >>  %new string /Yes is from below
+\end_layout
+
+\begin_layout Plain Layout
+
+  /MK<<%
+\end_layout
+
+\begin_layout Plain Layout
+
+	% Do not generate rotation, bordercolor, or background color
+\end_layout
+
+\begin_layout Plain Layout
+
+    /CA(
+\backslash
+Hy@escapestring{
+\backslash
+Fld@cbsymbol})%
+\end_layout
+
+\begin_layout Plain Layout
+
+  >>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /DA(/ZaDb 
+\backslash
+strip@pt
+\backslash
+Fld@charsize
+\backslash
+space Tf%
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+ifx
+\backslash
+Fld@color
+\backslash
+@empty
+\backslash
+else
+\backslash
+space
+\backslash
+Fld@color
+\backslash
+fi)%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /H/P%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+ifFld@checked /V/Yes/AS/Yes
+\backslash
+else /V/Off/AS/Off
+\backslash
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@additionalactions
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+def
+\backslash
+PDFForm@Text{%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /Subtype/Widget%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@annotflags
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@pageobjref
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@annotnames
+\end_layout
+
+\begin_layout Plain Layout
+
+  /FT/Tx%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@flags
+\end_layout
+
+\begin_layout Plain Layout
+
+  /Q 
+\backslash
+Fld@align
+\end_layout
+
+\begin_layout Plain Layout
+
+  /BS<</W 
+\backslash
+Fld@borderwidth
+\backslash
+space /S /
+\backslash
+Fld@borderstyle>>%
+\end_layout
+
+\begin_layout Plain Layout
+
+  % Do not generate rotation, bordercolor, or background color
+\end_layout
+
+\begin_layout Plain Layout
+
+  /DA(/Helv 
+\backslash
+strip@pt
+\backslash
+Fld@charsize
+\backslash
+space Tf%
+\end_layout
+
+\begin_layout Plain Layout
+
+      
+\backslash
+ifx
+\backslash
+Fld@color
+\backslash
+@empty
+\backslash
+else
+\backslash
+space
+\backslash
+Fld@color
+\backslash
+fi)%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /DV(
+\backslash
+Hy@escapestring{
+\backslash
+Fld@default})%
+\end_layout
+
+\begin_layout Plain Layout
+
+  /V(
+\backslash
+Hy@escapestring{
+\backslash
+Fld@value})%
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+Fld@additionalactions
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\backslash
+ifnum
+\backslash
+Fld@maxlen>
+\backslash
+z@/MaxLen 
+\backslash
+Fld@maxlen 
+\backslash
+fi
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Form-specific commands.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newlength
+\backslash
+TextFieldLength
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newlength
+\backslash
+tfbagap
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+tfbagap{3pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+TextBeforeAfter[3]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+setlength
+\backslash
+TextFieldLength{
+\backslash
+linewidth}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+settowidth{
+\backslash
+dimen0}{#1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+dimen0}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+settowidth{
+\backslash
+dimen0}{#2}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+dimen0}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+raisebox{0pt}[9pt]{#1}
+\backslash
+hspace{
+\backslash
+TextFieldLength}
+\backslash
+raisebox{0pt}[9pt]{#2}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+TextFieldBeforeAfter[4]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+setlength
+\backslash
+TextFieldLength{
+\backslash
+linewidth}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ifstrempty{#2}{}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+settowidth{
+\backslash
+dimen0}{#2}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+dimen0}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+tfbagap}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+raisebox{0pt}[9pt]{#2}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{
+\backslash
+tfbagap}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ifstrempty{#3}{}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+settowidth{
+\backslash
+dimen0}{#3}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+dimen0}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+addtolength
+\backslash
+TextFieldLength{-
+\backslash
+tfbagap}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+raisebox{-3pt}[9pt]{
+\backslash
+TextField[#1,width=
+\backslash
+TextFieldLength]{}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+llap{
+\backslash
+raisebox{1pt}[9pt]{
+\backslash
+underline{
+\backslash
+hspace{
+\backslash
+TextFieldLength}}}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+ifstrempty{#3}{}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{
+\backslash
+tfbagap}
+\backslash
+raisebox{0pt}[9pt]{#3}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformtitle
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\backslash
+raisebox{20pt}[0pt]{ 
+\backslash
+vtitlefont{
+\backslash
+fontsize{36}{0}
+\backslash
+selectfont{#1}} }}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace -8pt
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumform
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Begin PDF Form
+
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Text Field Style
+
+print, bordercolor=black, borderwidth=0pt, borderstyle=U, charsize=9pt
+\end_layout
+
+\begin_layout Check Box Style
+
+print, bordercolor=black, borderwidth=0pt, borderstyle=U, checkboxsymbol=
+\backslash
+ding{108}, height=6.5pt, width=6.8pt, charsize=7.65pt
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#1
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout End PDF Form
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformbar
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace 3.5pt
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{1.5ex}[14pt]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+fontsize{13.5}{0}
+\backslash
+selectfont%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+centerline{
+\backslash
+vtitlefont{
+\backslash
+vlncolor{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{3.5pt}
+\backslash
+hrulefill
+\backslash
+hspace{10pt}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+raisebox{-.5ex}{#1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{10pt}
+\backslash
+hrulefill
+\backslash
+hspace{3.5pt}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace -2.5pt
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformdot
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{0.5pt}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex CheckBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+#1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+llap{
+\backslash
+large
+\backslash
+tt{}○}
+\backslash
+hspace{0.225pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformbox
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+raisebox{0.5pt}{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex CheckBox
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+checkboxsymbol=
+\backslash
+ding{110}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+llap{
+\backslash
+large
+\backslash
+tt{}◻}
+\backslash
+hspace{0.225pt}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newlength
+\backslash
+lumformdotalign
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumformtrack[1]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+settowidth
+\backslash
+lumformdotalign{
+\backslash
+lumformdot{}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+raisebox{0.5pt}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+hspace{
+\backslash
+lumformdotalign}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+llap{
+\backslash
+raisebox{-1pt}{
+\backslash
+TextField[height=8pt, width=8pt, charsize=6.5pt,align=1]{}}}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+llap{
+\backslash
+Large
+\backslash
+tt{}◻}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformdots
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumformfilldots
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status open
+
+\begin_layout Plain Layout
+checked
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex LumFormDot
+status collapsed
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

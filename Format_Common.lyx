@@ -1,0 +1,3233 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass memoir
+\use_default_options true
+\begin_modules
+todonotes
+fixltx2e
+enumitem
+InStar
+pdfform
+\end_modules
+\maintain_unincluded_children false
+\begin_local_layout
+Format 66
+
+PackageOptions xcolor table
+PackageOptions todonotes colorinlistoftodos
+
+InsetLayout Flex:IgnoreThis
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Do not Render"
+  LatexType             command
+  LatexName             ignorethis
+  ResetsFont            true
+End
+
+InsetLayout Flex:Sidebar
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Sidebar"
+  LatexType             environment
+  LatexName             lumsidebar
+  Argument 1
+    LabelString         "Title"
+    Mandatory	    1
+  EndArgument
+  ResetsFont            true
+End
+
+InsetLayout Flex:Commentary
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Commentary"
+  LatexType             command
+  LatexName             lumcommentary
+  ResetsFont            true
+  BgColor               pink
+End
+
+InsetLayout Flex:ContentWarning
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Content Warning"
+  LatexType             environment
+  LatexName             cw-sidebarenv
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBox
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns"
+  LatexType             environment
+  LatexName             twocolumnbox
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBoxFill
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns Fill"
+  LatexType             environment
+  LatexName             twocolumnboxfill
+  ResetsFont            true
+End
+
+InsetLayout Flex:NewCommand
+  LyXType               custom
+  Decoration            classic
+  LabelString           "New Command"
+  LatexType             command
+  LatexName             newcommand
+  ResetsFont            true
+  Argument 1
+    LabelString         "Command"
+    Mandatory	    1
+    PassThruChars       "\[]{}_"
+  EndArgument
+  Argument 2
+    LabelString         "Argument Count"
+  EndArgument
+End
+
+InsetLayout Flex:LumPartQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Part Quote"
+  LatexType             command
+  LatexName             lumpartquote
+  ResetsFont            true
+End
+
+InsetLayout Flex:LumChapQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Chapter Quote"
+  LatexType             command
+  LatexName             lumchapquote
+  ResetsFont            true
+End
+\end_local_layout
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts true
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype true
+\use_dash_ligatures false
+\graphics xetex
+\default_output_format pdf4
+\output_sync 0
+\bibtex_command default
+\index_command makeindex
+\paperfontsize 10
+\spacing single
+\use_hyperref true
+\pdf_title "Luminous: the Dream"
+\pdf_author "AuroraAmissa"
+\pdf_subject "A Storytelling game of Distant Dreams"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks true
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref section
+\pdf_pdfusetitle true
+\papersize letterpaper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\justification true
+\use_refstyle 1
+\use_minted 0
+\branch Playtest
+\selected 0
+\filename_suffix 0
+\color #daf6f5
+\end_branch
+\branch Release
+\selected 0
+\filename_suffix 0
+\color #d3ecff
+\end_branch
+\branch CiBuild
+\selected 0
+\filename_suffix 0
+\color #e0a7ff
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 0.75in
+\topmargin 1in
+\rightmargin 0.75in
+\bottommargin 1in
+\footskip 0.5in
+\secnumdepth -2
+\tocdepth 5
+\paragraph_separation skip
+\defskip medskip
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style plain
+\dynamic_quotes 1
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 1
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ifdefined
+\backslash
+includeonceformatcommon 
+\backslash
+relax 
+\backslash
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+ignorethis[1]
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+includeonceformatcommon{--}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Section*
+LaTeX Prelude (Not in doc)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+This thing exists so there's an link to the prelude in the outline.
+ It will not be generated unless something goes very wrong.
+ Also, I'm a little shit and will use this box here.
+ :)
+\end_layout
+
+\begin_layout Plain Layout
+This section defines the package imports that allow me to do what I do in
+ this document, and the commands that the build_*.sh scripts use to define
+ settings for the build script.
+ Rather...
+ inelegant, but I couldn't think of better.
+\end_layout
+
+\begin_layout Plain Layout
+This whole section runs in the preamble, before 
+\backslash
+begin{document}, but there's no real visible sign of this due to the hack
+ for it kinda sucking...
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Preamble
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ifdefined
+\backslash
+includeonceformatcommonpreamble 
+\backslash
+relax 
+\backslash
+else
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+includeonceformatcommonpreamble{--}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Preamble
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Define layout
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+geometry{verbose,letterpaper,tmargin=1in,bmargin=1in,lmargin=0.75in,rmargin=0.75in
+,footskip=0.78in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Preamble
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Memoir-related configuration
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+strictpagecheck
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Preamble
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Load various packages
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage[english]{babel}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{datetime}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{colortbl}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage[raster, fitting, skins, breakable]{tcolorbox}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{multicol}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{verbatim} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{eso-pic}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{graphicx}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{gitinfo2}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{enumitem} % Fallback
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{todonotes} % Fallback
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Set encoding for tex4ebook
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage[T1]{fontenc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage[utf8]{inputenc}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Preamble
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Subsubsection*
+Setup Fonts
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+This loads the fonts for the rulebook.
+ Good typography makes all the difference for the 'feel' of a rulebook.
+\end_layout
+
+\begin_layout Plain Layout
+I would suggest you learn LaTeX, or at least the basics of LyX if you want
+ to do something like Luminous.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Setup fonts
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setromanfont{FiraSans}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	Path           = 
+\backslash
+input@path,
+\end_layout
+
+\begin_layout Plain Layout
+
+	UprightFont    = RulebookShared/fonts/FiraSans-Regular.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldFont       = RulebookShared/fonts/FiraSans-Medium.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ItalicFont     = RulebookShared/fonts/FiraSans-Italic.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldItalicFont = RulebookShared/fonts/FiraSans-MediumItalic.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setsansfont{FiraSans}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	Path           = 
+\backslash
+input@path,
+\end_layout
+
+\begin_layout Plain Layout
+
+	UprightFont    = RulebookShared/fonts/FiraSans-Regular.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldFont       = RulebookShared/fonts/FiraSans-Medium.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ItalicFont     = RulebookShared/fonts/FiraSans-Italic.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldItalicFont = RulebookShared/fonts/FiraSans-MediumItalic.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setmonofont{DejaVu Sans Mono}[
+\end_layout
+
+\begin_layout Plain Layout
+
+	Path           = 
+\backslash
+input@path,
+\end_layout
+
+\begin_layout Plain Layout
+
+	UprightFont    = RulebookShared/fonts/DejaVuSansMono.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldFont       = RulebookShared/fonts/DejaVuSansMono.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	ItalicFont     = RulebookShared/fonts/DejaVuSansMono.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+	BoldItalicFont = RulebookShared/fonts/DejaVuSansMono.ttf,
+\end_layout
+
+\begin_layout Plain Layout
+
+]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% epub typography
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+familydefault}{
+\backslash
+sfdefault}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Subsubsection*
+Setup Basic Styling
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+Boring styling.
+ This defines a lot of colors and the overall page layout.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Playtest
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+drafttext{Playtest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Playtest
+inverted 1
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+drafttext{Draft}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Setup colors
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{comment-bg}{HTML}{ffe6fd}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{comment-li}{HTML}{fcb8f7}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{cw-bg}{HTML}{ffe6e6}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{cw-li}{HTML}{ff787a}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{watermark}{HTML}{909090}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Setup gitinfo2
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+gitMarkPref}{
+\backslash
+drafttext{} 
+\backslash
+textbullet{} This version is subject to change}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+gitMark}{
+\backslash
+gitDescribe{} 
+\backslash
+textbullet{} 
+\backslash
+gitAuthorDate}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+gitMarkFormat}{
+\backslash
+color{watermark}
+\backslash
+fontsize{7}{0}
+\backslash
+sffamily}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+boolfalse{gitInf@mark}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\end_layout
+
+\begin_layout Plain Layout
+
+% Setup page layouts
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+footertextsize
+\backslash
+small
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makepagestyle{mystyle}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeoddfoot{mystyle}{
+\backslash
+footertextsize
+\backslash
+sffamily
+\backslash
+thepage}{}{
+\backslash
+footertextsize
+\backslash
+sffamily
+\backslash
+leftmark}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makepsmarks{mystyle}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+createmark{chapter}{left}{shownumber}{
+\backslash
+@chapapp
+\backslash
+ }{.
+ 
+\backslash
+ }%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+nouppercaseheads
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+pagestyle{mystyle}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+aliaspagestyle{plain}{mystyle}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand
+\backslash
+afterpartskip
+\backslash
+relax % allow quotes on the title pages.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Setup typography
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parfillskip}{0pt plus 1fil} % Paragraph spacing
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+emergencystretch=0.05em
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hyphenpenalty=1000 % Less hyphens please...
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hbadness=1000
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+raggedcolumns
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+twocoltocetc % two column table of contents
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+firmlists % Reduce list spacing.
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+labelitemi}{$
+\backslash
+texttt{❖}$}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlist[itemize]{leftmargin=1.2em}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+defaultparagraphsplitting{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+widowpenalties 1 10000 
+\backslash
+raggedbottom % Avoid splitting paragraphs.
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+twocolumnparagraphsplitting{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+widowpenalties 1 800 
+\backslash
+raggedbottom % Split paragraphs, but not 100% aggressively.
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+defaultparagraphsplitting
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Setup page background support
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vbgimage
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AddToShipoutPictureBG {%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+includegraphics[width=
+\backslash
+paperwidth,height=
+\backslash
+paperheight]{resources/bg_
+\backslash
+vbgimage}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch Release
+inverted 1
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Add gitmark2 thing.
+ This is obv copied from gitinfo2.
+\end_layout
+
+\begin_layout Plain Layout
+
+% Copied to put this above the background layer, not under.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+AddToShipoutPictureFG{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+AtPageLowerLeft{%
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+raisebox{1.575em}{%
+\end_layout
+
+\begin_layout Plain Layout
+
+			
+\backslash
+makebox[
+\backslash
+paperwidth]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+begin{minipage}[b]{
+\backslash
+paperwidth}%
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+renewcommand{
+\backslash
+baselinestretch}{1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+					
+\backslash
+centering{
+\backslash
+gitMarkFormat
+\backslash
+gitMarkPref{} 
+\backslash
+textbullet{} 
+\backslash
+gitMark}%
+\end_layout
+
+\begin_layout Plain Layout
+
+				
+\backslash
+end{minipage}%
+\end_layout
+
+\begin_layout Plain Layout
+
+			}%
+\end_layout
+
+\begin_layout Plain Layout
+
+		}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}% 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Subsubsection*
+Setup Section Styling
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+This section defines the variables and commands used for the per-section
+ styling.
+\end_layout
+
+\begin_layout Plain Layout
+I do this sometimes for e.g.
+ centering the splat titles, or the different colors and fonts in the three
+ sections of this book.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Command for declaring a section.
+\end_layout
+
+\begin_layout Plain Layout
+
+%
+\end_layout
+
+\begin_layout Plain Layout
+
+% Parameters:
+\end_layout
+
+\begin_layout Plain Layout
+
+% 1 - Section name (not command)
+\end_layout
+
+\begin_layout Plain Layout
+
+% 2 - Section Title Font Name
+\end_layout
+
+\begin_layout Plain Layout
+
+% 3 - Section Title Font Path
+\end_layout
+
+\begin_layout Plain Layout
+
+% 4 - Background color
+\end_layout
+
+\begin_layout Plain Layout
+
+% 5 - Deemphasized color
+\end_layout
+
+\begin_layout Plain Layout
+
+% 6 - Line/Title color
+\end_layout
+
+\begin_layout Plain Layout
+
+% 7 - Link color
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+definesection[7]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+expandafter
+\backslash
+newfontfamily
+\backslash
+csname #1titlefont
+\backslash
+endcsname[%
+\end_layout
+
+\begin_layout Plain Layout
+
+		Path           = 
+\backslash
+input@path,%
+\end_layout
+
+\begin_layout Plain Layout
+
+		UprightFont    = #3,%
+\end_layout
+
+\begin_layout Plain Layout
+
+		BoldFont       = #3,%
+\end_layout
+
+\begin_layout Plain Layout
+
+		ItalicFont     = #3,%
+\end_layout
+
+\begin_layout Plain Layout
+
+		BoldItalicFont = #3,%
+\end_layout
+
+\begin_layout Plain Layout
+
+	]{#2}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+definecolor{#1-bg}{HTML}{#4}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+definecolor{#1-de}{HTML}{#5}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+definecolor{#1-li}{HTML}{#6}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+definecolor{#1-ln}{HTML}{#7}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+newtcolorbox{#1-sidebarenv}{textmarker,colback=#1-bg,colframe=#1-li}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother%
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+setsection[1]{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vtitlefont{
+\backslash
+csname #1titlefont
+\backslash
+endcsname}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vcolorset{#1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vbgimage{#1}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+resethyper%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Setup command variables
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vtitlefont
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vtitlecentered
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vcolorset
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vsubsecsize
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vsubsubsecsize
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Setup macros
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+setsplatlayout{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vtitlecentered
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsecsize{
+\backslash
+fontsize{28}{30}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsubsecsize{
+\backslash
+fontsize{20.5}{24.5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+defaultlists
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+setsecsplatlayout{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vtitlecentered
+\backslash
+centering
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsecsize{
+\backslash
+fontsize{20.5}{24.5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsubsecsize{
+\backslash
+fontsize{15.5}{20}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+defaultlists
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+setnormallayout{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vtitlecentered
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsecsize{
+\backslash
+fontsize{20.5}{24.5}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+vsubsubsecsize{
+\backslash
+fontsize{15.5}{20}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+firmlists
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+resethyper{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+hypersetup{
+\end_layout
+
+\begin_layout Plain Layout
+
+		colorlinks=true,
+\end_layout
+
+\begin_layout Plain Layout
+
+		linkcolor=
+\backslash
+vlncolorname, 
+\end_layout
+
+\begin_layout Plain Layout
+
+		urlcolor=
+\backslash
+vlncolorname,
+\end_layout
+
+\begin_layout Plain Layout
+
+		pdfborderstyle={/S/U/W 0},
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Common commands
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vbgcolorname{
+\backslash
+vcolorset-bg}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vbgcolor{
+\backslash
+color{
+\backslash
+vbgcolorname}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vdecolorname{
+\backslash
+vcolorset-de}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vdecolor{
+\backslash
+color{
+\backslash
+vdecolorname}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vlncolorname{
+\backslash
+vcolorset-ln}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vlncolor{
+\backslash
+color{
+\backslash
+vlncolorname}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vlicolorname{
+\backslash
+vcolorset-li}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+vlicolor{
+\backslash
+color{
+\backslash
+vlicolorname}}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Headings style
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength
+\backslash
+beforechapskip{22pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumquotechapskip{
+\backslash
+setlength
+\backslash
+afterchapskip{15pt}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumnormalchapskip{
+\backslash
+setlength
+\backslash
+afterchapskip{30pt}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lumnormalchapskip
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+titlenohyphen{
+\backslash
+hyphenpenalty=10000
+\backslash
+raggedright}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+parttitlefont}{
+\backslash
+titlenohyphen
+\backslash
+fontsize{38}{34}
+\backslash
+vtitlefont
+\backslash
+centering}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+chaptitlefont}{
+\backslash
+titlenohyphen
+\backslash
+fontsize{38}{34}
+\backslash
+vtitlefont
+\backslash
+centering}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setsecheadstyle{
+\backslash
+titlenohyphen
+\backslash
+fontsize{28}{30}
+\backslash
+vtitlefont
+\backslash
+vtitlecentered}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setsubsecheadstyle{
+\backslash
+titlenohyphen
+\backslash
+vsubsecsize
+\backslash
+vtitlefont
+\backslash
+vtitlecentered}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setsubsubsecheadstyle{
+\backslash
+titlenohyphen
+\backslash
+vsubsubsecsize
+\backslash
+vtitlefont}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeforesecskip{1.5ex}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeforesubsecskip{1.5ex}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setbeforesubsubsecskip{1.5ex}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+% Setup section layout
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setuptodonotes{color=
+\backslash
+vbgcolorname}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setnormallayout
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+resethyper
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Subsubsection*
+Custom Insets Commands
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+This section implements the custom insets (like this box right here!).
+\end_layout
+
+\begin_layout Plain Layout
+This helps the structure of the document be more understandable, without
+ it being chock full of raw LaTeX any more than it already is.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumsidebargap
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumsidebarrule
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumsidebarnormal{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebargap{1.9mm}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebarrule{1.6pt}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumsidebarpageinset{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebargap{2.75mm}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebarrule{1.6pt}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumsidebartwocolumn{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebargap{1.2mm}%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumsidebarrule{1.35pt}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lumsidebarnormal
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+tcbset{textmarker/.style={% 
+\end_layout
+
+\begin_layout Plain Layout
+
+	skin=enhancedmiddle jigsaw,breakable,parbox=false, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	boxrule=0pt,leftrule=
+\backslash
+lumsidebarrule,rightrule=
+\backslash
+lumsidebarrule,boxsep=0mm,arc=0mm,outer arc=0mm, 
+\end_layout
+
+\begin_layout Plain Layout
+
+	left=
+\backslash
+lumsidebargap,right=
+\backslash
+lumsidebargap,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,oversize
+\end_layout
+
+\begin_layout Plain Layout
+
+}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtcolorbox{comment-sidebarenv}{textmarker,colback=comment-bg,colframe=comment-
+li}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newtcolorbox{cw-sidebarenv}{textmarker,colback=cw-bg,colframe=cw-li}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newenvironment{lumsidebar}[1]
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+begin{
+\backslash
+vcolorset-sidebarenv} 
+\backslash
+subsubsection*{#1}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+end{
+\backslash
+vcolorset-sidebarenv}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lumcommentary[1]
+\backslash
+relax
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+enablecommentary{
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+renewcommand
+\backslash
+lumcommentary[1]{
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+begin{comment-sidebarenv}
+\end_layout
+
+\begin_layout Plain Layout
+
+			##1
+\end_layout
+
+\begin_layout Plain Layout
+
+		
+\backslash
+end{comment-sidebarenv}
+\end_layout
+
+\begin_layout Plain Layout
+
+	}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newenvironment{twocolumnbox}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+lumsidebartwocolumn 
+\backslash
+twocolumnparagraphsplitting 
+\backslash
+begin{multicols}{2}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+end{multicols} 
+\backslash
+defaultparagraphsplitting 
+\backslash
+lumsidebarnormal}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newenvironment{twocolumnboxfill}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+lumsidebartwocolumn 
+\backslash
+twocolumnparagraphsplitting 
+\backslash
+begin{multicols*}{2}}
+\end_layout
+
+\begin_layout Plain Layout
+
+	{
+\backslash
+end{multicols*} 
+\backslash
+defaultparagraphsplitting 
+\backslash
+lumsidebarnormal}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+crw{
+\backslash
+rowcolor{
+\backslash
+vcolorset-bg}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+lcl{
+\backslash
+cellcolor{
+\backslash
+vcolorset-ln}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex IgnoreThis
+status open
+
+\begin_layout Subsubsection*
+Common Sections
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex Commentary
+status open
+
+\begin_layout Plain Layout
+This section implements sections that are expected to contain a *lot* of
+ inline code.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumcustomtitle
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout In Title
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setcounter{page}{0}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\size giant
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vtitlefont{
+\backslash
+fontsize{37}{0}
+\backslash
+selectfont {#1}}
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\family sans
+\size normal
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+vskip 0.1em 
+\backslash
+fontsize{14}{0} 
+\backslash
+selectfont {#2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+
+\family sans
+\size normal
+\begin_inset Branch Release
+inverted 0
+status open
+
+\begin_layout Standard
+Revision
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch Release
+inverted 1
+status open
+
+\begin_layout Standard
+\begin_inset Branch Playtest
+inverted 0
+status open
+
+\begin_layout Standard
+Playtest
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch Playtest
+inverted 1
+status open
+
+\begin_layout Standard
+Draft
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gitDescribe{}
+\end_layout
+
+\end_inset
+
+
+\family default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+gitAuthorDate{}
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Do not format the title page with any style.
+\end_layout
+
+\begin_layout Plain Layout
+
+% As we mean to use as a PDF, not print, it's fine that our page numbering
+ beings at 2.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+playtesttext
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Branch Release
+inverted 1
+status open
+
+\begin_layout Standard
+This is a 
+\begin_inset Branch CiBuild
+inverted 0
+status open
+
+\begin_layout Standard
+automatically rendered
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Branch Playtest
+inverted 0
+status open
+
+\begin_layout Standard
+playtest
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Branch Playtest
+inverted 1
+status open
+
+\begin_layout Standard
+draft
+\end_layout
+
+\end_inset
+
+ version of 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+#1
+\end_layout
+
+\end_inset
+
+.
+ The mechanics and lore of this book may change at a later date, and many
+ parts of this system have yet to be fully finalized.
+ 
+\begin_inset Branch Playtest
+inverted 1
+status open
+
+\begin_layout Standard
+A current version of this document may be found on Aurora's 
+\begin_inset CommandInset href
+LatexCommand href
+name "Jenkins"
+target "https://lymia.moe/jenkins/job/LuminousTheDream/"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumpartquote
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+#1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+thispagestyle{empty} 
+\backslash
+vfil
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumchapquote
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+lumquotechapskip
+\end_layout
+
+\begin_layout Plain Layout
+
+#1
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+vspace{18pt}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+lumnormalchapskip
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumcustomfooter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+% Just disable colorful hyperlinks at this point.
+ Makes the index look bad.
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+hypersetup{
+\end_layout
+
+\begin_layout Plain Layout
+
+  colorlinks=false,
+\end_layout
+
+\begin_layout Plain Layout
+
+  linkcolor=black, 
+\end_layout
+
+\begin_layout Plain Layout
+
+  urlcolor=black,
+\end_layout
+
+\begin_layout Plain Layout
+
+  pdfborderstyle={/S/U/W 0},
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Branch Release
+inverted 1
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+todototoc 
+\backslash
+listoftodos
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset index_print
+LatexCommand printindex
+type "idx"
+name "Index"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+fi
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
