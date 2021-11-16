@@ -1,0 +1,9 @@
+\#*
+*~
+*.kate-swp
+
+/*.pdf
+/*.tex
+
+/build
+/dist
