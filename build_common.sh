@@ -34,7 +34,7 @@ init_build() {
         ZIP_FILE_BIND=" - Playtest"
     ;;
     ci)
-        if [ ! -z "$GITHUB_RUN_NUMBER" ]; then
+        if [ ! -n "$GITHUB_RUN_NUMBER" ]; then
             ZVERSION="r$GITHUB_RUN_NUMBER"
         fi
         
