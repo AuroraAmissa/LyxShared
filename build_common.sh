@@ -34,8 +34,8 @@ init_build() {
         ZIP_FILE_BIND=" - Playtest"
     ;;
     ci)
-        if [ ! -z "$BUILD_NUMBER" ]; then
-            ZVERSION="r$BUILD_NUMBER"
+        if [ ! -z "$GITHUB_RUN_NUMBER" ]; then
+            ZVERSION="r$GITHUB_RUN_NUMBER"
         fi
         
         activate_branch RulebookShared/Format_Common CiBuild || exit 1
