@@ -42,16 +42,6 @@ InsetLayout Flex:Sidebar
   ResetsFont            true
 End
 
-InsetLayout Flex:Commentary
-  LyXType               custom
-  Decoration            classic
-  LabelString           "Commentary"
-  LatexType             command
-  LatexName             lumcommentary
-  ResetsFont            true
-  BgColor               pink
-End
-
 InsetLayout Flex:ContentWarning
   LyXType               custom
   Decoration            classic
@@ -271,10 +261,6 @@ LaTeX Prelude (Not in doc)
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 This thing exists so there's an link to the prelude in the outline.
  It will not be generated unless something goes very wrong.
  Also, I'm a little shit and will use this box here.
@@ -294,11 +280,6 @@ This whole section runs in the preamble, before
 \backslash
 begin{document}, but there's no real visible sign of this due to the hack
  for it kinda sucking...
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -519,10 +500,6 @@ Setup Fonts
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 This loads the fonts for the rulebook.
  Good typography makes all the difference for the 'feel' of a rulebook.
 \end_layout
@@ -530,11 +507,6 @@ This loads the fonts for the rulebook.
 \begin_layout Plain Layout
 I would suggest you learn LaTeX, or at least the basics of LyX if you want
  to do something like Luminous.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -716,17 +688,8 @@ Setup Basic Styling
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 Boring styling.
  This defines a lot of colors and the overall page layout.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -797,20 +760,6 @@ status open
 \begin_layout Plain Layout
 
 % Setup colors
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-definecolor{comment-bg}{HTML}{ffe6fd}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-definecolor{comment-li}{HTML}{fcb8f7}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1342,10 +1291,6 @@ Setup Section Styling
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 This section defines the variables and commands used for the per-section
  styling.
 \end_layout
@@ -1354,11 +1299,6 @@ This section defines the variables and commands used for the per-section
 I do this sometimes for e.g.
  centering the splat titles, or the different colors and fonts in the three
  sections of this book.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -2199,21 +2139,12 @@ Custom Insets Commands
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 This section implements the custom insets (like this box right here!).
 \end_layout
 
 \begin_layout Plain Layout
 This helps the structure of the document be more understandable, without
  it being chock full of raw LaTeX any more than it already is.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -2390,14 +2321,6 @@ lumsidebargap,top=2mm,bottom=2mm,toptitle=1mm,bottomtitle=1mm,oversize
 
 
 \backslash
-newtcolorbox{comment-sidebarenv}{textmarker,colback=comment-bg,colframe=comment-
-li}
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
 newtcolorbox{cw-sidebarenv}{textmarker,colback=cw-bg,colframe=cw-li}
 \end_layout
 
@@ -2430,73 +2353,6 @@ subsubsection*{#1}}
 end{
 \backslash
 vcolorset-sidebarenv}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-newcommand
-\backslash
-lumcommentary[1]
-\backslash
-relax
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-newcommand
-\backslash
-enablecommentary{
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-renewcommand
-\backslash
-lumcommentary[1]{
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-begin{comment-sidebarenv}
-\end_layout
-
-\begin_layout Plain Layout
-
-			##1
-\end_layout
-
-\begin_layout Plain Layout
-
-		
-\backslash
-end{comment-sidebarenv}
-\end_layout
-
-\begin_layout Plain Layout
-
-	}
-\end_layout
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -2615,17 +2471,8 @@ Common Sections
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex Commentary
-status open
-
-\begin_layout Plain Layout
 This section implements sections that are expected to contain a *lot* of
  inline code.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
