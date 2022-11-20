@@ -75,7 +75,7 @@ create_source_archive() {
     
     # Copy repository files
     cp -r fonts/ resources/ build.sh *.md *.lyx "build/$SOURCE_NAME-$VERSION" || exit 1
-    rm "build/$SOURCE_NAME-$VERSION/resources"/*.xcf || exit 1
+    rm "build/$SOURCE_NAME-$VERSION/resources"/*.xcf # intentionally no exit in case there are no xcf files.
     
     # Copy shared files
     mkdir "build/$SOURCE_NAME-$VERSION/RulebookShared" || exit 1
