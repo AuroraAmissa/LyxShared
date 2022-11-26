@@ -854,7 +854,11 @@ renewcommand{
 \backslash
 gitMark}{
 \backslash
-gitDescribe{} 
+texttt
+\backslash
+vgitmarksize{
+\backslash
+gitDescribe{}} 
 \backslash
 textbullet{} 
 \backslash
@@ -881,6 +885,15 @@ sffamily}
 
 \backslash
 boolfalse{gitInf@mark}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+gitmarkheight{1.575em}
 \end_layout
 
 \begin_layout Plain Layout
@@ -1236,7 +1249,9 @@ AtPageLowerLeft{%
 
 		
 \backslash
-raisebox{1.575em}{%
+raisebox{
+\backslash
+gitmarkheight}{%
 \end_layout
 
 \begin_layout Plain Layout
@@ -2561,6 +2576,22 @@ This section implements sections that are expected to contain a *lot* of
 \end_layout
 
 \begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatletter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Flex NewCommand
 status open
 
@@ -3163,6 +3194,110 @@ name "Index"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumcustomtoc
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+chapter{Contents}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex TwoColumnBoxFill
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begingroup
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+parskip
+\backslash
+cftparskip
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
+@starttoc{toc}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+endgroup
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+makeatother
 \end_layout
 
 \end_inset
