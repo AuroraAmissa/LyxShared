@@ -116,6 +116,19 @@ InsetLayout Flex:LumIncomplete
     Mandatory	    1
   EndArgument
 End
+
+InsetLayout Flex:LumIncompleteSection
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Incomplete Section"
+  LatexType             command
+  LatexName             lumincompletesection
+  ResetsFont            true
+  Argument 1
+    LabelString         "Name"
+    Mandatory	    1
+  EndArgument
+End
 \end_local_layout
 \language english
 \language_package default
@@ -447,7 +460,7 @@ usepackage{multicol}
 
 
 \backslash
-usepackage{verbatim} 
+usepackage{verbatim}
 \end_layout
 
 \begin_layout Plain Layout
@@ -3337,33 +3350,48 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Flex TODO Note (inline)
-status open
-
-\begin_layout Plain Layout
-The 
-\begin_inset Branch LyxBuild
-inverted 0
-status open
-
-\begin_layout Standard
-following
-\end_layout
-
-\end_inset
-
- section about 
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-#1
+
+\backslash
+chapter{#1}
 \end_layout
 
 \end_inset
 
- is incomplete.
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Flex TODO Note (inline)
+status open
+
+\begin_layout Plain Layout
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+The following
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch LyxBuild
+inverted 1
+status open
+
+\begin_layout Standard
+This
+\end_layout
+
+\end_inset
+
+ chapter is incomplete.
  
 \begin_inset Branch LyxBuild
 inverted 1
@@ -3371,6 +3399,18 @@ status open
 
 \begin_layout Standard
 It has been excluded from playtest and draft documents.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+All its contents are subject to change, and are not final.
+ They might not even make sense!
 \end_layout
 
 \end_inset
@@ -3402,12 +3442,72 @@ status open
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Flex NewCommand
+status open
+
+\begin_layout Plain Layout
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+lumincompletesection
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 2
+status open
+
+\begin_layout Plain Layout
+2
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Flex TODO Note (inline)
 status open
 
 \begin_layout Plain Layout
-The preceding section about 
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+The following
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch LyxBuild
+inverted 1
+status open
+
+\begin_layout Standard
+This
+\end_layout
+
+\end_inset
+
+ section about 
 \begin_inset ERT
 status open
 
@@ -3419,6 +3519,49 @@ status open
 \end_inset
 
  is incomplete.
+ 
+\begin_inset Branch LyxBuild
+inverted 1
+status open
+
+\begin_layout Standard
+It has been excluded from playtest and draft documents.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+All its contents are subject to change, and are not final.
+ They might not even make sense!
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+#2
 \end_layout
 
 \end_inset
