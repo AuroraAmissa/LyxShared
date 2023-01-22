@@ -1,4 +1,5 @@
-#!/bin/bash
+cur_dir="$(cd -P -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+cd "$cur_dir/.." || exit 1
 
 SOURCE_NAME="UnknownSources"
 VERSION="$(git describe --tags --long --always --match '[0-9]*.*')"
@@ -93,4 +94,8 @@ create_source_archive() {
     tar --xz -cvf "$1.tar.xz" "$SOURCE_NAME-$VERSION" || exit 1
     mv "$1.tar.xz" ../dist || exit 1
     cd ..
+}
+
+clean_script() {
+    rm -rfv build/ dist/
 }
