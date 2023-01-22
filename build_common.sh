@@ -16,11 +16,11 @@ init_build() {
     ln -s ../../RulebookShared/fonts build/RulebookShared/fonts || exit 1
 
     echo " - Copying in .lyx files"
-    cp *.lyx build || exit 1
+    cp -r contents build/contents || exit 1
     cp RulebookShared/*.lyx build/RulebookShared || exit 1
 
     echo " - Disabling all branches"
-    sed -i -e '/\\branch .*/,+1s/\\selected.*/\\selected 0/' build/*.lyx build/RulebookShared/*.lyx || exit 1
+    sed -i -e '/\\branch .*/,+1s/\\selected.*/\\selected 0/' build/contents/*.lyx build/RulebookShared/*.lyx || exit 1
 
     case $1 in
     release)
@@ -50,11 +50,11 @@ init_build() {
 }
 
 activate_branch() {
-    sed -i -e '/\\branch '$2'.*/,+1s/\\selected.*/\\selected 1/' "build/$1.lyx" || exit 1
+    sed -i -e '/\\branch '$2'.*/,+1s/\\selected.*/\\selected 1/' "build/contents/$1.lyx" || exit 1
 }
 render_pdf() {
     # Creates the direct output PDF
-    lyx -v "build/$1.lyx" -E pdf4 "build/$1_Temp.pdf" || exit 1
+    lyx -v "build/contents/$1.lyx" -E pdf4 "build/$1_Temp.pdf" || exit 1
     
     # Encrypt and recompress the PDF. This isn't really used for any real security, it's just here to avoid accidental modification.
     # Also to encourge anyone who wants to fork or do other weird stuff to *actually* use LyX instead of some weird PDF editor...
@@ -73,8 +73,12 @@ create_archive() {
 create_source_archive() {
     mkdir "build/$SOURCE_NAME-$VERSION" || exit 1
     
+    # Copy contents
+    mkdir "build/$SOURCE_NAME-$VERSION/contents" || exit 1
+    cp contents/*.lyx "build/$SOURCE_NAME-$VERSION/contents" || exit 1
+    
     # Copy repository files
-    cp -r fonts/ resources/ build.sh *.md *.lyx "build/$SOURCE_NAME-$VERSION" || exit 1
+    cp -r fonts/ resources/ build.sh *.md "build/$SOURCE_NAME-$VERSION" || exit 1
     rm "build/$SOURCE_NAME-$VERSION/resources"/*.xcf # intentionally no exit in case there are no xcf files.
     
     # Copy shared files

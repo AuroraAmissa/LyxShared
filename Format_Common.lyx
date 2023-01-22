@@ -584,22 +584,22 @@ input@path,
 
 \begin_layout Plain Layout
 
-	UprightFont    = RulebookShared/fonts/FiraSans-Regular.ttf,
+	UprightFont    = ../RulebookShared/fonts/FiraSans-Regular.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldFont       = RulebookShared/fonts/FiraSans-Medium.ttf,
+	BoldFont       = ../RulebookShared/fonts/FiraSans-Medium.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	ItalicFont     = RulebookShared/fonts/FiraSans-Italic.ttf,
+	ItalicFont     = ../RulebookShared/fonts/FiraSans-Italic.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldItalicFont = RulebookShared/fonts/FiraSans-MediumItalic.ttf,
+	BoldItalicFont = ../RulebookShared/fonts/FiraSans-MediumItalic.ttf,
 \end_layout
 
 \begin_layout Plain Layout
@@ -623,22 +623,22 @@ input@path,
 
 \begin_layout Plain Layout
 
-	UprightFont    = RulebookShared/fonts/FiraSans-Regular.ttf,
+	UprightFont    = ../RulebookShared/fonts/FiraSans-Regular.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldFont       = RulebookShared/fonts/FiraSans-Medium.ttf,
+	BoldFont       = ../RulebookShared/fonts/FiraSans-Medium.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	ItalicFont     = RulebookShared/fonts/FiraSans-Italic.ttf,
+	ItalicFont     = ../RulebookShared/fonts/FiraSans-Italic.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldItalicFont = RulebookShared/fonts/FiraSans-MediumItalic.ttf,
+	BoldItalicFont = ../RulebookShared/fonts/FiraSans-MediumItalic.ttf,
 \end_layout
 
 \begin_layout Plain Layout
@@ -662,22 +662,22 @@ input@path,
 
 \begin_layout Plain Layout
 
-	UprightFont    = RulebookShared/fonts/DejaVuSansMono.ttf,
+	UprightFont    = ../RulebookShared/fonts/DejaVuSansMono.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldFont       = RulebookShared/fonts/DejaVuSansMono.ttf,
+	BoldFont       = ../RulebookShared/fonts/DejaVuSansMono.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	ItalicFont     = RulebookShared/fonts/DejaVuSansMono.ttf,
+	ItalicFont     = ../RulebookShared/fonts/DejaVuSansMono.ttf,
 \end_layout
 
 \begin_layout Plain Layout
 
-	BoldItalicFont = RulebookShared/fonts/DejaVuSansMono.ttf,
+	BoldItalicFont = ../RulebookShared/fonts/DejaVuSansMono.ttf,
 \end_layout
 
 \begin_layout Plain Layout
@@ -1214,7 +1214,7 @@ includegraphics[width=
 \backslash
 paperwidth,height=
 \backslash
-paperheight]{resources/bg_
+paperheight]{../resources/bg_
 \backslash
 vbgimage}%
 \end_layout
@@ -3341,7 +3341,18 @@ status open
 status open
 
 \begin_layout Plain Layout
-The following section about 
+The 
+\begin_inset Branch LyxBuild
+inverted 0
+status open
+
+\begin_layout Standard
+following
+\end_layout
+
+\end_inset
+
+ section about 
 \begin_inset ERT
 status open
 
