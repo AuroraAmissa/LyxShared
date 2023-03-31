@@ -51,7 +51,7 @@ init_build() {
 }
 
 activate_branch() {
-    sed -i -e '/\\branch '$2'.*/,+1s/\\selected.*/\\selected 1/' "build/contents/$1.lyx" || exit 1
+    sed -i -e '/\\branch '$2'.*/,+1s/\\selected.*/\\selected 1/' "build/$1.lyx" || exit 1
 }
 render_pdf() {
     # Creates the direct output PDF
