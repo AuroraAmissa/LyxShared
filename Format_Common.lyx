@@ -104,6 +104,13 @@ InsetLayout Flex:LumChapQuote
   ResetsFont            true
 End
 
+InsetLayout Flex:Foldable          # Define a new "flex" inset called "Foldable"
+  LyxType         custom           # Add to Insert > Custom Insets
+  LatexType       none             # Export contents to latex as-is, ignoring the wrapper.
+  Decoration      minimalistic     # Do not show a label, only the outer box, when not folded.
+  ContentAsLabel  true             # When folded show truncated contents as label.
+End
+  
 InsetLayout Flex:LumIncomplete
   LyXType               custom
   Decoration            classic

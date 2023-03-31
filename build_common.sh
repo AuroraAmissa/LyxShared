@@ -99,3 +99,42 @@ create_source_archive() {
 clean_script() {
     rm -rfv build/ dist/
 }
+
+update_layout() {
+    layout_file="build/LyxLayout.ins"
+    if [[ "$1" == *"Format_Sheets.lyx"* ]]; then
+        layout_file="build/LyxLayoutSheets.ins"
+    fi
+    if grep -q "../RulebookShared/Format_Sheets.lyx" "$1"; then
+        layout_file="build/LyxLayoutSheets.ins"
+    fi
+    
+    echo "Updating '$1' with layout '$layout_file'..."
+    sed '/\\begin_local_layout/q' "$1" > build/RewriteFile.tmp || exit 1
+    cat "$layout_file" >> build/RewriteFile.tmp || exit 1
+    echo "\end_local_layout" >> build/RewriteFile.tmp || exit 1
+    sed '1,/\\end_local_layout/d' "$1" >> build/RewriteFile.tmp || exit 1
+    
+    if ! diff -q "$1" build/RewriteFile.tmp &>/dev/null; then
+        echo "- Overriding original file..."
+        cp build/RewriteFile.tmp "$1" || exit 1
+    fi
+}
+update_layouts_script() {
+    mkdir -p build || exit 1
+    
+    # Create layout for normal documents
+    cat RulebookShared/LyxLayout.ins > build/LyxLayout.ins
+    cat RulebookShared/LyxLayout.ins RulebookShared/LyxLayoutSheets.ins > build/LyxLayoutSheets.ins
+    
+    # Add local layout
+    if [ -f LyxLayoutLocal.ins ]; then
+        cat LyxLayoutLocal.ins > build/LyxLayout.ins
+        cat LyxLayoutLocal.ins > build/LyxLayoutSheets.ins
+    fi
+    
+    # Update all lyx files
+    for i in contents/*.lyx RulebookShared/*.lyx; do
+        update_layout "$i" || exit 1
+    done
+}

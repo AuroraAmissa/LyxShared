@@ -42,16 +42,6 @@ InsetLayout Flex:Sidebar
   ResetsFont            true
 End
 
-InsetLayout Flex:Commentary
-  LyXType               custom
-  Decoration            classic
-  LabelString           "Commentary"
-  LatexType             command
-  LatexName             lumcommentary
-  ResetsFont            true
-  BgColor               pink
-End
-
 InsetLayout Flex:ContentWarning
   LyXType               custom
   Decoration            classic
@@ -67,6 +57,15 @@ InsetLayout Flex:TwoColumnBox
   LabelString           "Two Columns"
   LatexType             environment
   LatexName             twocolumnbox
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBoxFill
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns Fill"
+  LatexType             environment
+  LatexName             twocolumnboxfill
   ResetsFont            true
 End
 
@@ -87,6 +86,56 @@ InsetLayout Flex:NewCommand
   EndArgument
 End
 
+InsetLayout Flex:LumPartQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Part Quote"
+  LatexType             command
+  LatexName             lumpartquote
+  ResetsFont            true
+End
+
+InsetLayout Flex:LumChapQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Chapter Quote"
+  LatexType             command
+  LatexName             lumchapquote
+  ResetsFont            true
+End
+
+InsetLayout Flex:Foldable          # Define a new "flex" inset called "Foldable"
+  LyxType         custom           # Add to Insert > Custom Insets
+  LatexType       none             # Export contents to latex as-is, ignoring the wrapper.
+  Decoration      minimalistic     # Do not show a label, only the outer box, when not folded.
+  ContentAsLabel  true             # When folded show truncated contents as label.
+End
+  
+InsetLayout Flex:LumIncomplete
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Incomplete Chapter"
+  LatexType             command
+  LatexName             lumincomplete
+  ResetsFont            true
+  Argument 1
+    LabelString         "Name"
+    Mandatory	    1
+  EndArgument
+End
+
+InsetLayout Flex:LumIncompleteSection
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Incomplete Section"
+  LatexType             command
+  LatexName             lumincompletesection
+  ResetsFont            true
+  Argument 1
+    LabelString         "Name"
+    Mandatory	    1
+  EndArgument
+End
 InsetLayout Flex:LumForm
   LyXType               custom
   Decoration            classic

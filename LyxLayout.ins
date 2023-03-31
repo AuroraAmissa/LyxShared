@@ -1,0 +1,121 @@
+Format 66
+
+PackageOptions xcolor table
+PackageOptions todonotes colorinlistoftodos
+
+InsetLayout Flex:IgnoreThis
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Do not Render"
+  LatexType             command
+  LatexName             ignorethis
+  ResetsFont            true
+End
+
+InsetLayout Flex:Sidebar
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Sidebar"
+  LatexType             environment
+  LatexName             lumsidebar
+  Argument 1
+    LabelString         "Title"
+    Mandatory	    1
+  EndArgument
+  ResetsFont            true
+End
+
+InsetLayout Flex:ContentWarning
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Content Warning"
+  LatexType             environment
+  LatexName             cw-sidebarenv
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBox
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns"
+  LatexType             environment
+  LatexName             twocolumnbox
+  ResetsFont            true
+End
+
+InsetLayout Flex:TwoColumnBoxFill
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Two Columns Fill"
+  LatexType             environment
+  LatexName             twocolumnboxfill
+  ResetsFont            true
+End
+
+InsetLayout Flex:NewCommand
+  LyXType               custom
+  Decoration            classic
+  LabelString           "New Command"
+  LatexType             command
+  LatexName             newcommand
+  ResetsFont            true
+  Argument 1
+    LabelString         "Command"
+    Mandatory	    1
+    PassThruChars       "\[]{}_"
+  EndArgument
+  Argument 2
+    LabelString         "Argument Count"
+  EndArgument
+End
+
+InsetLayout Flex:LumPartQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Part Quote"
+  LatexType             command
+  LatexName             lumpartquote
+  ResetsFont            true
+End
+
+InsetLayout Flex:LumChapQuote
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Chapter Quote"
+  LatexType             command
+  LatexName             lumchapquote
+  ResetsFont            true
+End
+
+InsetLayout Flex:Foldable          # Define a new "flex" inset called "Foldable"
+  LyxType         custom           # Add to Insert > Custom Insets
+  LatexType       none             # Export contents to latex as-is, ignoring the wrapper.
+  Decoration      minimalistic     # Do not show a label, only the outer box, when not folded.
+  ContentAsLabel  true             # When folded show truncated contents as label.
+End
+
+InsetLayout Flex:LumIncomplete
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Incomplete Chapter"
+  LatexType             command
+  LatexName             lumincomplete
+  ResetsFont            true
+  Argument 1
+    LabelString         "Name"
+    Mandatory	    1
+  EndArgument
+End
+
+InsetLayout Flex:LumIncompleteSection
+  LyXType               custom
+  Decoration            classic
+  LabelString           "Incomplete Section"
+  LatexType             command
+  LatexName             lumincompletesection
+  ResetsFont            true
+  Argument 1
+    LabelString         "Name"
+    Mandatory	    1
+  EndArgument
+End
