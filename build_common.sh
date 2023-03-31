@@ -102,8 +102,11 @@ clean_script() {
 
 update_layout() {
     layout_file="build/LyxLayout.ins"
+    if [[ "$1" == *"Format_Common.lyx"* ]]; then
+        layout_file="build/LyxLayoutSystem.ins"
+    fi
     if [[ "$1" == *"Format_Sheets.lyx"* ]]; then
-        layout_file="build/LyxLayoutSheets.ins"
+        layout_file="build/LyxLayoutSheetsSystem.ins"
     fi
     if grep -q "../RulebookShared/Format_Sheets.lyx" "$1"; then
         layout_file="build/LyxLayoutSheets.ins"
@@ -126,6 +129,8 @@ update_layouts_script() {
     # Create layout for normal documents
     cat RulebookShared/LyxLayout.ins > build/LyxLayout.ins
     cat RulebookShared/LyxLayout.ins RulebookShared/LyxLayoutSheets.ins > build/LyxLayoutSheets.ins
+    cat RulebookShared/LyxLayout.ins > build/LyxLayoutSystem.ins
+    cat RulebookShared/LyxLayout.ins RulebookShared/LyxLayoutSheets.ins > build/LyxLayoutSheetsSystem.ins
     
     # Add local layout
     if [ -f LyxLayoutLocal.ins ]; then

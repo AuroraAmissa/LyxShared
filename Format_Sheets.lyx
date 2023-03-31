@@ -110,7 +110,7 @@ InsetLayout Flex:Foldable          # Define a new "flex" inset called "Foldable"
   Decoration      minimalistic     # Do not show a label, only the outer box, when not folded.
   ContentAsLabel  true             # When folded show truncated contents as label.
 End
-  
+
 InsetLayout Flex:LumIncomplete
   LyXType               custom
   Decoration            classic
