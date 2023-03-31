@@ -27,6 +27,14 @@ InsetLayout Flex:IgnoreThis
   LatexType             command
   LatexName             ignorethis
   ResetsFont            true
+
+  HTMLTag               div
+  HTMLIsBlock           true
+  HTMLStyle
+    div.flex_ignorethis {
+      display: none;
+    }
+  EndHTMLStyle
 End
 
 InsetLayout Flex:Sidebar
@@ -37,7 +45,7 @@ InsetLayout Flex:Sidebar
   LatexName             lumsidebar
   Argument 1
     LabelString         "Title"
-    Mandatory	    1
+    Mandatory	        1
   EndArgument
   ResetsFont            true
 End
@@ -78,12 +86,20 @@ InsetLayout Flex:NewCommand
   ResetsFont            true
   Argument 1
     LabelString         "Command"
-    Mandatory	    1
+    Mandatory	        1
     PassThruChars       "\[]{}_"
   EndArgument
   Argument 2
     LabelString         "Argument Count"
   EndArgument
+
+  HTMLTag               div
+  HTMLIsBlock           true
+  HTMLStyle
+    div.flex_newcommand {
+      display: none;
+    }
+  EndHTMLStyle
 End
 
 InsetLayout Flex:LumPartQuote
@@ -104,11 +120,14 @@ InsetLayout Flex:LumChapQuote
   ResetsFont            true
 End
 
-InsetLayout Flex:Foldable          # Define a new "flex" inset called "Foldable"
-  LyxType         custom           # Add to Insert > Custom Insets
-  LatexType       none             # Export contents to latex as-is, ignoring the wrapper.
-  Decoration      minimalistic     # Do not show a label, only the outer box, when not folded.
-  ContentAsLabel  true             # When folded show truncated contents as label.
+InsetLayout Flex:Foldable
+  LyxType               custom
+  LatexType             none
+  Decoration            minimalistic
+  ContentAsLabel        true
+  
+  HTMLTag               div
+  HTMLIsBlock           true
 End
 
 InsetLayout Flex:LumIncomplete
@@ -120,8 +139,16 @@ InsetLayout Flex:LumIncomplete
   ResetsFont            true
   Argument 1
     LabelString         "Name"
-    Mandatory	    1
+    Mandatory	        1
   EndArgument
+
+  HTMLTag               div
+  HTMLIsBlock           true
+  HTMLStyle
+    div.flex_lumincomplete {
+      display: none;
+    }
+  EndHTMLStyle
 End
 
 InsetLayout Flex:LumIncompleteSection
@@ -133,8 +160,16 @@ InsetLayout Flex:LumIncompleteSection
   ResetsFont            true
   Argument 1
     LabelString         "Name"
-    Mandatory	    1
+    Mandatory	        1
   EndArgument
+
+  HTMLTag               div
+  HTMLIsBlock           true
+  HTMLStyle
+    div.flex_lumincompletesection {
+      display: none;
+    }
+  EndHTMLStyle
 End
 InsetLayout Flex:LumForm
   LyXType               custom
