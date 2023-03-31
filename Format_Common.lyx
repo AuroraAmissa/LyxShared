@@ -23,10 +23,14 @@ PackageOptions todonotes colorinlistoftodos
 InsetLayout Flex:IgnoreThis
   LyXType               custom
   Decoration            classic
-  LabelString           "Do not Render"
+  LabelString           "Hidden Text"
   LatexType             command
-  LatexName             ignorethis
+  LatexName             lumsharednorender
   ResetsFont            true
+
+  Preamble
+    \newcommand\lumsharednorender[1]\relax
+  EndPreamble
 
   HTMLTag               div
   HTMLIsBlock           true
@@ -64,8 +68,14 @@ InsetLayout Flex:TwoColumnBox
   Decoration            classic
   LabelString           "Two Columns"
   LatexType             environment
-  LatexName             twocolumnbox
+  LatexName             lumsharedtwocolumnbox
   ResetsFont            true
+
+  Preamble
+    \newenvironment{lumsharedtwocolumnbox}
+      {\lumsidebartwocolumn \twocolumnparagraphsplitting \begin{multicols}{2}}
+      {\end{multicols} \defaultparagraphsplitting \lumsidebarnormal}
+  EndPreamble
 End
 
 InsetLayout Flex:TwoColumnBoxFill
@@ -73,8 +83,14 @@ InsetLayout Flex:TwoColumnBoxFill
   Decoration            classic
   LabelString           "Two Columns Fill"
   LatexType             environment
-  LatexName             twocolumnboxfill
+  LatexName             lumsharedtwocolumnboxfill
   ResetsFont            true
+
+  Preamble
+    \newenvironment{lumsharedtwocolumnboxfill}
+      {\lumsidebartwocolumn \twocolumnparagraphsplitting \begin{multicols*}{2}}
+      {\end{multicols*} \defaultparagraphsplitting \lumsidebarnormal}
+  EndPreamble
 End
 
 InsetLayout Flex:NewCommand
@@ -294,21 +310,6 @@ includeonceformatcommon
 relax 
 \backslash
 else
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-newcommand
-\backslash
-ignorethis[1]
-\backslash
-relax
 \end_layout
 
 \begin_layout Plain Layout
@@ -533,14 +534,14 @@ usepackage{gitinfo2}
 
 
 \backslash
-usepackage{enumitem} % Fallback
+usepackage{enumitem}
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-usepackage{todonotes} % Fallback
+usepackage{todonotes}
 \end_layout
 
 \begin_layout Plain Layout
