@@ -485,6 +485,13 @@ usepackage{graphicx}
 
 
 \backslash
+usepackage{graphbox}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
 usepackage{gitinfo2}
 \end_layout
 
@@ -500,6 +507,13 @@ usepackage{enumitem}
 
 \backslash
 usepackage{todonotes}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+usepackage{wrapfig}
 \end_layout
 
 \end_inset
@@ -2634,7 +2648,23 @@ lumcustomtitle
 status open
 
 \begin_layout Plain Layout
-2
+3
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setsection{#3}
 \end_layout
 
 \end_inset
@@ -2827,6 +2857,13 @@ status open
 thispagestyle{empty}
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Newpage newpage
 \end_inset
 
 
