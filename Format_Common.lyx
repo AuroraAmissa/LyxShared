@@ -838,6 +838,31 @@ definecolor{cw-li}{HTML}{ff787a}
 definecolor{watermark}{HTML}{909090}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{watermark-dark}{HTML}{000000}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+definecolor{watermark-light}{HTML}{ffffff}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand
+\backslash
+gitwatermarkclr{
+\backslash
+color{watermark}}
+\end_layout
+
 \end_inset
 
 
@@ -867,18 +892,29 @@ fontsize{7}{0}}
 
 
 \backslash
+newcommand
+\backslash
+resetgitmark{%
+\end_layout
+
+\begin_layout Plain Layout
+
+	
+\backslash
 renewcommand{
 \backslash
 gitMarkPref}{
 \backslash
 drafttext{} 
 \backslash
-textbullet{} This version is subject to change}
+textbullet{} This version is subject to change 
+\backslash
+textbullet{}}%
 \end_layout
 
 \begin_layout Plain Layout
 
-
+	
 \backslash
 renewcommand{
 \backslash
@@ -892,7 +928,19 @@ gitDescribe{}}
 \backslash
 textbullet{} 
 \backslash
-gitAuthorDate}
+gitAuthorDate}%
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+resetgitmark
 \end_layout
 
 \begin_layout Plain Layout
@@ -903,7 +951,7 @@ renewcommand{
 \backslash
 gitMarkFormat}{
 \backslash
-color{watermark}
+gitwatermarkclr
 \backslash
 vgitmarksize
 \backslash
@@ -1320,8 +1368,6 @@ centering{
 gitMarkFormat
 \backslash
 gitMarkPref{} 
-\backslash
-textbullet{} 
 \backslash
 gitMark}%
 \end_layout
