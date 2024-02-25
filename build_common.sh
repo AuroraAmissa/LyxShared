@@ -119,9 +119,6 @@ update_layout() {
     cat "$layout_file" >> build/RewriteFile.tmp || exit 1
     echo "\end_local_layout" >> build/RewriteFile.tmp || exit 1
     sed '1,/\\end_local_layout/d' "$1" >> build/RewriteFile.tmp || exit 1
-    
-    # Rewrite the line thing (LyX 2.3->2.4)
-    sed -i -e "s/\defskip medskip/\defskip halfline/g" build/RewriteFile.tmp || exit 1
 
     # Refactor renamed Lyx insets
     sed -i -e 's/^\\begin_inset Flex IgnoreThis$/\\begin_inset Note Note/' build/RewriteFile.tmp || exit 1
