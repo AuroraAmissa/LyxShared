@@ -112,7 +112,7 @@ update_layout() {
     if grep -q "../RulebookShared/Format_Sheets.lyx" "$1"; then
         layout_file="build/LyxLayoutSheets.ins"
     fi
-    
+
     # Rewrite the Lyx file with the new layout
     echo "Updating '$1' with layout '$layout_file'..."
     sed '/\\begin_local_layout/q' "$1" > build/RewriteFile.tmp || exit 1
@@ -120,6 +120,9 @@ update_layout() {
     echo "\end_local_layout" >> build/RewriteFile.tmp || exit 1
     sed '1,/\\end_local_layout/d' "$1" >> build/RewriteFile.tmp || exit 1
     
+    # Rewrite the line thing (LyX 2.3->2.4)
+    sed -i -e "s/\defskip medskip/\defskip halfline/g" build/RewriteFile.tmp || exit 1
+
     # Refactor renamed Lyx insets
     sed -i -e 's/^\\begin_inset Flex IgnoreThis$/\\begin_inset Note Note/' build/RewriteFile.tmp || exit 1
     sed -i -e 's/^\\begin_inset Flex TwoColumnBox$/\\begin_inset Flex TwoColumns/' build/RewriteFile.tmp || exit 1
