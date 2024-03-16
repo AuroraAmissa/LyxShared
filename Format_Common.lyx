@@ -21,8 +21,10 @@ pdfform
 \maintain_unincluded_children no
 \begin_local_layout
 Format 66
+
 PackageOptions xcolor table
 PackageOptions todonotes colorinlistoftodos
+
 InsetLayout Flex:Sidebar
   LyXType               custom
   Decoration            classic
@@ -35,6 +37,7 @@ InsetLayout Flex:Sidebar
   EndArgument
   ResetsFont            true
 End
+
 InsetLayout Flex:SidebarContentWarning
   LyXType               custom
   Decoration            classic
@@ -43,6 +46,7 @@ InsetLayout Flex:SidebarContentWarning
   LatexName             cw-sidebarenv
   ResetsFont            true
 End
+
 InsetLayout Flex:TwoColumns
   LyXType               custom
   Decoration            classic
@@ -50,12 +54,14 @@ InsetLayout Flex:TwoColumns
   LatexType             environment
   LatexName             lumsharedtwocolumnbox
   ResetsFont            true
+
   Preamble
     \newenvironment{lumsharedtwocolumnbox}
       {\lumsidebartwocolumn \twocolumnparagraphsplitting \begin{multicols}{2}}
       {\end{multicols} \defaultparagraphsplitting \lumsidebarnormal}
   EndPreamble
 End
+
 InsetLayout Flex:TwoColumnsFill
   LyXType               custom
   Decoration            classic
@@ -63,12 +69,14 @@ InsetLayout Flex:TwoColumnsFill
   LatexType             environment
   LatexName             lumsharedtwocolumnboxfill
   ResetsFont            true
+
   Preamble
     \newenvironment{lumsharedtwocolumnboxfill}
       {\lumsidebartwocolumn \twocolumnparagraphsplitting \begin{multicols*}{2}}
       {\end{multicols*} \defaultparagraphsplitting \lumsidebarnormal}
   EndPreamble
 End
+
 InsetLayout Flex:NewCommand
   LyXType               custom
   Decoration            classic
@@ -84,6 +92,7 @@ InsetLayout Flex:NewCommand
   Argument 2
     LabelString         "Argument Count"
   EndArgument
+
   HTMLTag               div
   HTMLIsBlock           true
   HTMLStyle
@@ -92,6 +101,7 @@ InsetLayout Flex:NewCommand
     }
   EndHTMLStyle
 End
+
 InsetLayout Flex:CofDPartQuote
   LyXType               custom
   Decoration            classic
@@ -100,6 +110,7 @@ InsetLayout Flex:CofDPartQuote
   LatexName             lumpartquote
   ResetsFont            true
 End
+
 InsetLayout Flex:CofDChapterQuote
   LyXType               custom
   Decoration            classic
@@ -108,14 +119,17 @@ InsetLayout Flex:CofDChapterQuote
   LatexName             lumchapquote
   ResetsFont            true
 End
+
 InsetLayout Flex:CollapsableRegion
   LyxType               custom
   LatexType             none
   Decoration            minimalistic
   ContentAsLabel        true
+  
   HTMLTag               div
   HTMLIsBlock           true
 End
+
 InsetLayout Flex:IncompleteChapter
   LyXType               custom
   Decoration            classic
@@ -127,6 +141,7 @@ InsetLayout Flex:IncompleteChapter
     LabelString         "Name"
     Mandatory	        1
   EndArgument
+
   HTMLTag               div
   HTMLIsBlock           true
   HTMLStyle
@@ -135,6 +150,7 @@ InsetLayout Flex:IncompleteChapter
     }
   EndHTMLStyle
 End
+
 InsetLayout Flex:IncompleteSection
   LyXType               custom
   Decoration            classic
@@ -146,6 +162,7 @@ InsetLayout Flex:IncompleteSection
     LabelString         "Name"
     Mandatory	        1
   EndArgument
+
   HTMLTag               div
   HTMLIsBlock           true
   HTMLStyle
