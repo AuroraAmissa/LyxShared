@@ -25,9 +25,11 @@ flake-utils.lib.eachDefaultSystem (system:
                         export IS_REALLY_DIRTY=1
                     fi
                     export DIRTY_SHORT_REV="${self.dirtyShortRev}"
+                    export SOURCE_NAME="${local.sourceArcName}"
+                    export DIST_NAME="${local.distArcName}"
 
                     # Set up repository properly
-                    rm -v dirtyrepohack isDirtyForReal
+                    rm -vf dirtyrepohack isDirtyForReal
                     mkdir -vp .git
                     mv -v gitHeadInfo.gin .git
 
@@ -36,7 +38,6 @@ flake-utils.lib.eachDefaultSystem (system:
                     init_build "${kind}"
 
                     # Build source archive
-                    export SOURCE_NAME="${local.sourceArcName}"
                     create_source_archive "${local.sourceArcName}$ZIP_FILE_SUFFIX $ZVERSION"
 
                     # Build PDF documents
@@ -44,7 +45,6 @@ flake-utils.lib.eachDefaultSystem (system:
                     ${local.buildScripts}
 
                     # Build output archive
-                    export DIST_NAME="${local.distArcName}"
                     create_archive "${local.distArcName}$ZIP_FILE_SUFFIX $ZVERSION"
                 '';
                 installPhase = ''
@@ -55,9 +55,8 @@ flake-utils.lib.eachDefaultSystem (system:
             };
             build_script = pkgs.writeScriptBin "build-script" ''
                 #! ${pkgs.bash}/bin/bash
-                echo "${LuminousTheDream-pdf}"
-                ls "${LuminousTheDream-pdf}"
-                tar tvf "${LuminousTheDream-pdf}"/*.tar.zst
+                mkdir -p dist
+                ln -sv "${LuminousTheDream-pdf}"/* dist/
             '';
         };
 

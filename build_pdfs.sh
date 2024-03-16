@@ -54,7 +54,8 @@ render_pdf() {
     # Also to encourge anyone who wants to fork or do other weird stuff to *actually* use LyX instead of some weird PDF editor...
     qpdf "$1_Temp.pdf" "$1.pdf" \
         --compress-streams=y --object-streams=generate --coalesce-contents \
-        --encrypt "" "pls dont do anything weird with the password :( :(" 256 \
+        --recompress-flate --compression-level=9 --optimize-images \
+        --encrypt "" "pls dont do anything weird with the password :( :( / $SOURCE_NAME / $DIST_NAME" 256 \
         --extract=y --assemble=n --form=n --annotate=n --modify-other=n --print=full --modify=none --cleartext-metadata "${@:4}" -- || exit 1
     cp "$1.pdf" "/build/out/$2$3.pdf" || exit 1
 }
