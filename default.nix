@@ -8,8 +8,8 @@ flake-utils.lib.eachDefaultSystem (system:
         };
 
         mk_build_script = kind: rec {
-            LuminousTheDream-pdf = pkgs.stdenv.mkDerivation {
-                name = "LuminousTheDream-pdf";
+            pdf_derivation = pkgs.stdenv.mkDerivation {
+                name = "${local.name}-pdf";
                 src = ./..;
                 buildInputs = [
                     pkgs.lyx
@@ -55,10 +55,10 @@ flake-utils.lib.eachDefaultSystem (system:
             };
 
             link_cmd = if kind == "ci" then "cp -v" else "ln -sv";
-            build_script = pkgs.writeScriptBin "build-script" ''
+            build_script = pkgs.writeScriptBin "${local.name}-build" ''
                 #! ${pkgs.bash}/bin/bash
                 mkdir -p dist
-                ${link_cmd} "${LuminousTheDream-pdf}"/* dist/
+                ${link_cmd} "${pdf_derivation}"/* dist/
             '';
         };
 
