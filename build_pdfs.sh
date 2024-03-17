@@ -66,8 +66,8 @@ create_source_archive() {
 
     # Copy contents
     cp -r .git * "$SOURCE_TEMP" || exit 1
-    rm -rfv "$SOURCE_TEMP/resources/*.xcf" "$SOURCE_TEMP/scripts/init.sh" || exit 1
-    rm -rfv "$SOURCE_TEMP/RulebookShared"/{.gitignore,scripts,layouts,hooks} || exit 1
+    rm -rfv "$SOURCE_TEMP"/resources/*.xcf "$SOURCE_TEMP"/scripts/init.sh || exit 1
+    rm -rfv "$SOURCE_TEMP"/RulebookShared/{.gitignore,scripts,layouts,hooks} || exit 1
 
     # Build the tar archive
     mv "$SOURCE_TEMP" . || exit 1

@@ -53,10 +53,12 @@ flake-utils.lib.eachDefaultSystem (system:
                     mv -v *.zip $out
                 '';
             };
+
+            link_cmd = if kind == "ci" then "cp -v" else "ln -sv";
             build_script = pkgs.writeScriptBin "build-script" ''
                 #! ${pkgs.bash}/bin/bash
                 mkdir -p dist
-                ln -sv "${LuminousTheDream-pdf}"/* dist/
+                ${link_cmd} "${LuminousTheDream-pdf}"/* dist/
             '';
         };
 
