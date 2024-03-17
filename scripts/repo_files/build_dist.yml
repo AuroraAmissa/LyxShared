@@ -13,7 +13,7 @@ jobs:
         with:
           submodules: 'recursive'
           lfs: true
-      - uses: cachix/install-nix-action@v22
+      - uses: cachix/install-nix-action@v26
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - run: scripts/build.sh ci
@@ -39,7 +39,7 @@ jobs:
         with:
           name: dist-packages
           path: artifacts
-          
+
       - name: Remove git hooks (hack to make action-create-tag work)
         run: 'rm -rfv .git/hooks/*'
       - uses: rickstaa/action-create-tag@v1
