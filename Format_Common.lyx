@@ -1276,6 +1276,59 @@ raggedbottom % Split paragraphs,
 defaultparagraphsplitting
 \end_layout
 
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+footmarkwidth}{0.8em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+footmarksep}{-0.8em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+footparindent}{10em}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+foottextfont}{
+\backslash
+footnotesize
+\backslash
+;}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*{
+\backslash
+footnoterule}{}
+\end_layout
+
 \end_inset
 
 

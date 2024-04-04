@@ -1,14 +1,15 @@
-#!/bin/sh
-cd "$(realpath "$(dirname "$0")")/.." || exit 1
+#!/bin/sh -eu
+
+cd "$(realpath "$(dirname "$0")")/.."
 
 echo "Updating git submodules..."
-git submodule update --init || exit 1
+git submodule update --init
 echo
 
 echo "Setting up git hooks..."
-git config --local core.hooksPath RulebookShared/hooks || exit 1
+git config --local core.hooksPath RulebookShared/hooks
 echo
 
 echo "Setup lfs"
-git lfs pull || exit 1
+git lfs pull
 echo

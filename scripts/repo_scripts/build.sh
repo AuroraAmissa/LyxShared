@@ -1,6 +1,8 @@
-#!/bin/sh
+#!/bin/sh -eu
 
-cd "$(realpath "$(dirname "$0")")/.." || exit 1
+# TODO: Make this shit significantly less hacky.
+
+cd "$(realpath "$(dirname "$0")")/.."
 
 if [ "$#" -ne 1 ]; then
     TARGET="draft"
@@ -13,14 +15,14 @@ if test -n "$(git status --porcelain)"; then
     touch isDirtyForReal
 fi
 
-RulebookShared/hooks/gitInfo2 || exit 1
-cp -v .git/gitHeadInfo.gin gitHeadInfo.gin || exit 1
+RulebookShared/hooks/gitInfo2
+cp -v .git/gitHeadInfo.gin gitHeadInfo.gin
 
-touch dirtyrepohack || exit 1
+touch dirtyrepohack
 
-git add dirtyrepohack gitHeadInfo.gin || exit 1
+git add dirtyrepohack gitHeadInfo.gin
 if [ -f isDirtyForReal ]; then
-    git add isDirtyForReal || exit 1
+    git add isDirtyForReal
 fi
 nix run .?submodules=1#build_"$TARGET"
 

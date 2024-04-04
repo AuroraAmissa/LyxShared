@@ -1,3 +1,3 @@
-#!/bin/sh
-cd "$(realpath "$(dirname "$0")")/.." || exit 1
-rm -rfv dist
+#!/bin/sh -eu
+cd "$(realpath "$(dirname "$0")")/.."
+rm -rfv dist ||:
