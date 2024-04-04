@@ -6,7 +6,7 @@
             type = "github";
             owner = "NixOS";
             repo = "nixpkgs";
-            rev = "d691274a972b3165335d261cc4671335f5c67de9";
+            rev = "08b9151ed40350725eb40b1fe96b0b86304a654b";
         };
         flake-utils = {
             type = "github";

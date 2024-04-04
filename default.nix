@@ -29,22 +29,17 @@ flake-utils.lib.eachDefaultSystem (system:
                     pkgs.zstd
                 ];
                 buildPhase = ''
+                    # Extract information from git
+                    export GIT_REV="${self.rev or self.dirtyRev or "0000000000000000000000000000000000000000"}"
+                    export GIT_TIMESTAMP="${toString (self.lastModified or 0)}"
+                    . ${./lib/git_info_from_nix.sh}
+
                     # Set up environment variables
-                    export IS_REALLY_DIRTY=0
-                    if [ -f isDirtyForReal ]; then
-                        export IS_REALLY_DIRTY=1
-                    fi
-                    export DIRTY_SHORT_REV="${self.dirtyShortRev}"
                     export SOURCE_NAME="${local.sourceArcName}"
                     export DIST_NAME="${local.distArcName}"
 
-                    # Set up repository properly
-                    rm -vf dirtyrepohack isDirtyForReal
-                    mkdir -vp .git
-                    mv -v gitHeadInfo.gin .git
-
                     # Initialize build
-                    . ${./build_pdfs.sh}
+                    . ${./lib/build_pdfs.sh}
                     init_build "${kind}"
 
                     # Build source archive
@@ -64,7 +59,7 @@ flake-utils.lib.eachDefaultSystem (system:
                 '';
             };
 
-            link_cmd = if kind == "ci" then "cp -v" else "ln -sv";
+            link_cmd = if kind == "ci" then "cp -vf" else "ln -svf";
             build_script = pkgs.writeScriptBin "${local.name}-build" ''
                 #! ${pkgs.bash}/bin/bash
                 mkdir -p dist

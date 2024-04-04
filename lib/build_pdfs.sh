@@ -1,8 +1,4 @@
-VERSION="$DIRTY_SHORT_REV"
-if [ $IS_REALLY_DIRTY != 1 ]; then
-    # shellcheck disable=SC2001
-    VERSION="$(echo "$VERSION" | sed "s/-dirty//g")"
-fi
+VERSION="$GIT_REF_DIRTY"
 ZVERSION="v$VERSION"
 
 init_build() {
